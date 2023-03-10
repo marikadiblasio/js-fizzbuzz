@@ -8,17 +8,21 @@
 
 //console.log
 for ( let i = 1; i <= 100; i++ ){
-    let squareText = i
+    let squareText = i;
+    let bgSpecial = 'bg-warning';
     if ((i % 3 === 0) && (i % 5 === 0)) {
-        squareText = 'FizzBuzz'
+        squareText = 'FizzBuzz';
+        bgSpecial = 'bg-green';
     } else if (i % 3 === 0){
-        squareText = 'Fizz'
+        squareText = 'Fizz';
+        bgSpecial = 'bg-blue';
     } else if (i % 5 === 0) {
-        squareText = 'Buzz'
+        squareText = 'Buzz';
+        bgSpecial = 'bg-yellow';
     }
     document.getElementById('container').innerHTML += `
-    <div class="square bg-warning  p-1">
-        <div class="int-square rounded d-flex align-items-center justify-content-center bg-danger">${squareText}
+    <div class="square bg-danger  p-1">
+        <div class="int-square rounded d-flex align-items-center justify-content-center ${bgSpecial}">${squareText}
         </div>
     </div>`
 }
