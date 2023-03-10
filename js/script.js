@@ -6,8 +6,19 @@
 1. Scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
 2. Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"*/
 
-//prova a stampare - pensa all'if - stilizza
 //console.log
 for ( let i = 1; i <= 100; i++ ){
-    console.log(i);
+    let squareText = i
+    if ((i % 3 === 0) && (i % 5 === 0)) {
+        squareText = 'FizzBuzz'
+    } else if (i % 3 === 0){
+        squareText = 'Fizz'
+    } else if (i % 5 === 0) {
+        squareText = 'Buzz'
+    }
+    document.getElementById('container').innerHTML += `
+    <div class="square bg-warning  p-1">
+        <div class="int-square rounded d-flex align-items-center justify-content-center bg-danger">${squareText}
+        </div>
+    </div>`
 }
